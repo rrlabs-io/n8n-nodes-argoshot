@@ -1,0 +1,46 @@
+{
+  "name": "n8n-nodes-argoshot",
+  "version": "0.1.0",
+  "description": "n8n node for Argoshot: screenshots, PDFs and Open Graph images of any public web page or HTML, from a workflow or an AI agent.",
+  "license": "MIT",
+  "homepage": "https://argoshot.com/docs",
+  "keywords": [
+    "n8n-community-node-package",
+    "argoshot",
+    "screenshot",
+    "pdf",
+    "html-to-image",
+    "open-graph"
+  ],
+  "author": { "name": "Argoshot", "email": "support@argoshot.com" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrlabs-io/n8n-nodes-argoshot.git"
+  },
+  "bugs": { "email": "support@argoshot.com" },
+  "engines": { "node": ">=20.15" },
+  "main": "index.js",
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": ["dist/credentials/ArgoshotApi.credentials.js"],
+    "nodes": ["dist/nodes/Argoshot/Argoshot.node.js"]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "@types/node": "^22.0.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.8.0"
+  },
+  "peerDependencies": { "n8n-workflow": "*" }
+}
